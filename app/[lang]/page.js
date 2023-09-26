@@ -5,6 +5,7 @@ export default function Home() {
     <main>
       <Title>Hello world!</Title>
       <Button>Get started</Button>
+      <div className="text-lg font-bold">Tailwindcss</div>
     </main>
   )
 }
