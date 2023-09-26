@@ -12,6 +12,7 @@
     "@mantine/core": "^7.0.2",
     "@mantine/hooks": "^7.0.2",
     "next": "13.5.3",
+    "notion-plus": "^0.1.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
