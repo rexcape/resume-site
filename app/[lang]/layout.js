@@ -1,7 +1,8 @@
 import '@mantine/core/styles.css'
-import './layout.css'
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core'
+import { getTranslations } from '@/lib/notion'
+import { Shell } from '@/components/Shell'
 
 export const metadata = {
   title: 'Rxsume',
@@ -12,14 +13,19 @@ export function generateStaticParams() {
   return [{ lang: 'zh' }, { lang: 'jp' }, { lang: 'en' }]
 }
 
-export default function RootLayout({ children, params }) {
+export default async function RootLayout({ children, params }) {
+  const t = (await getTranslations('layout'))[params.lang]
   return (
     <html lang={params.lang}>
       <head>
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <Shell t={t} lang={params.lang}>
+            {children}
+          </Shell>
+        </MantineProvider>
       </body>
     </html>
   )
