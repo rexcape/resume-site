@@ -13,6 +13,7 @@
     "@mantine/hooks": "^7.0.2",
     "@tabler/icons-react": "^2.35.0",
     "next": "13.5.3",
+    "next-i18n-router": "^4.0.0",
     "notion-plus": "^0.1.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
