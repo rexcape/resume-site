@@ -7,7 +7,7 @@ export default async function Home({ params }) {
     <main>
       <Title>Hello world!</Title>
       <Button>Get started</Button>
-      <div>i18n test: {t['1']}</div>
+      <div className="font-bold text-lg">i18n test: {t['1']}</div>
     </main>
   )
 }
