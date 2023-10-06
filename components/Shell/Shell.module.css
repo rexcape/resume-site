@@ -1,6 +1,6 @@
 .control {
   display: block;
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-md);
   font-weight: 700;
   @apply transition;
@@ -11,4 +11,12 @@
       var(--mantine-color-dark-6)
     );
   }
+}
+
+.title {
+  @apply block px-2 py-2 rounded border;
+}
+
+.navbar {
+  @apply flex items-center justify-center;
 }

@@ -10,17 +10,20 @@ import {
   Group,
 } from '@mantine/core'
 import Link from 'next/link'
-import { IconFileText } from '@tabler/icons-react'
+import i18nConfig from '@/i18n'
 import classes from './Shell.module.css'
 
 export function Shell({ children, t, lang }) {
   const [opened, { toggle }] = useDisclosure()
 
-  const links = [
-    { href: `/${lang}/`, label: t['6'] },
-    { href: `/${lang}/projects`, label: t['4'] },
-    { href: `/${lang}/certifications`, label: t['5'] },
-  ]
+  const getLinks = () => {
+    const prefix = lang === i18nConfig.defaultLocale ? '/' : `/${lang}/`
+    return [
+      { href: `${prefix}`, label: t['6'] },
+      { href: `${prefix}projects`, label: t['4'] },
+      { href: `${prefix}certifications`, label: t['5'] },
+    ]
+  }
 
   return (
     <AppShell
@@ -32,13 +35,12 @@ export function Shell({ children, t, lang }) {
       }}
       padding="md"
     >
-      <AppShellHeader>
+      <AppShellHeader className={classes.navbar}>
         <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Group justify="space-between" style={{ flex: 1 }}>
-            <IconFileText size={30} />
+          <Group justify="space-between">
             <Group ml="xl" gap={2} visibleFrom="sm">
-              {links.map((item) => (
+              {getLinks().map((item) => (
                 <Link
                   className={classes.control}
                   key={item.href}
@@ -53,7 +55,7 @@ export function Shell({ children, t, lang }) {
       </AppShellHeader>
 
       <AppShellNavbar py="md" px={4}>
-        {links.map((item) => (
+        {getLinks().map((item) => (
           <Link className={classes.control} key={item.href} href={item.href}>
             {item.label}
           </Link>
