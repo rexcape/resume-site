@@ -61,7 +61,7 @@ export function Shell({ children, t, lang }) {
           </Link>
         ))}
       </AppShellNavbar>
-      <AppShellMain>{children}</AppShellMain>
+      <AppShellMain style={{ padding: '0' }}>{children}</AppShellMain>
     </AppShell>
   )
 }

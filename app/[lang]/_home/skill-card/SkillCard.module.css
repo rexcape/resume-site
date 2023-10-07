@@ -1,0 +1,44 @@
+.skillCard {
+  position: relative;
+  width: rem(64px);
+  height: rem(64px);
+  border-radius: var(--mantine-radius-md);
+
+  @apply transition-all;
+
+  &:hover {
+    box-shadow: var(--mantine-shadow-md);
+    transform: translateY(-2px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: rem(24px);
+    width: rem(24px);
+    transform: translateX(50%) translateY(50%);
+    z-index: 1;
+    border-radius: var(--mantine-radius-md);
+    background-color: var(--mantine-color-body);
+    filter: blur(4px);
+  }
+}
+
+.skillImg {
+  border-radius: var(--mantine-radius-md);
+  border-color: light-dark(
+    var(--mantine-color-gray-5),
+    var(--mantine-color-gray-1)
+  );
+  border-width: rem(2px);
+}
+
+.tierSvg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(50%) translateY(50%);
+  z-index: 2;
+}

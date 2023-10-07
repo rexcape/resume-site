@@ -1,0 +1,88 @@
+$underline-width: 38%;
+
+.title {
+  background-color: transparent;
+  background-image: linear-gradient(var(--mantine-color-violet-2), var(--mantine-color-violet-2));
+  background-repeat: no-repeat;
+  background-size: 0% 28%;
+  background-position: 0 100%;
+  width: fit-content;
+  animation: 2s highlight ease-in-out forwards;
+  font-size: rem(36px);
+
+  --title-color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+
+  display: inline-block;
+  position: relative;
+
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin-bottom: calc(var(--mantine-spacing-xl) * 2);
+  letter-spacing: rem(1px);
+  margin-left: rem(22px);
+  text-transform: uppercase;
+  color: var(--title-color);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-md);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(10px);
+    height: rem(10px);
+  }
+
+  &::before {
+    top: rem(-14px);
+    left: rem(-22px);
+    border-left: rem(5px) solid var(--title-color);
+    border-top: rem(5px) solid var(--title-color);
+  }
+
+  &::after {
+    bottom: rem(-14px);
+    right: rem(-22px);
+    border-right: rem(5px) solid var(--title-color);
+    border-bottom: rem(5px) solid var(--title-color);
+  }
+
+  @media (max-width: em(600px)) {
+    font-size: rem(24px);
+    margin-left: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &[data-white] {
+    color: var(--mantine-color-white);
+    text-shadow: rem(1px) rem(2px) rem(2px) rgba(0, 0, 0, 0.3);
+
+    &::before,
+    &::after {
+      filter: drop-shadow(rem(1px) rem(2px) rem(2px) rgba(0, 0, 0, 0.3));
+      border-color: var(--mantine-color-white);
+    }
+  }
+
+  &[data-default] {
+    &::before,
+    &::after {
+      border-color: var(--title-color);
+    }
+  }
+}
+
+@keyframes highlight {
+  to {
+    background-size: 100% 28%;
+  }
+}

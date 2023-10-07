@@ -1,13 +1,7 @@
-import { Button, Title } from '@mantine/core'
 import { getTranslations } from '@/lib/notion'
+import { HomePage } from './_home/HomePage'
 
 export default async function Home({ params }) {
   const t = (await getTranslations('index'))[params.lang]
-  return (
-    <main>
-      <Title>Hello world!</Title>
-      <Button>Get started</Button>
-      <div>i18n test: {t['1']}</div>
-    </main>
-  )
+  return <HomePage t={t} />
 }
