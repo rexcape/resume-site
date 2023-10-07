@@ -1,3 +1,4 @@
+import './globals.css'
 import '@mantine/core/styles.css'
 
 import { Noto_Sans_SC, Noto_Sans_JP, Noto_Sans } from 'next/font/google'
