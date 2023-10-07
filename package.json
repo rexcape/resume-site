@@ -12,6 +12,7 @@
     "@mantine/core": "^7.1.2",
     "@mantine/hooks": "^7.1.2",
     "@tabler/icons-react": "^2.38.0",
+    "encoding": "^0.1.13",
     "next": "13.5.4",
     "next-i18n-router": "^4.1.1",
     "notion-plus": "^0.1.7",
