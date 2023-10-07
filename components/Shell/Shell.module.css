@@ -3,9 +3,7 @@
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-md);
   font-weight: 700;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  @apply transition;
 
   @mixin hover {
     background-color: light-dark(
