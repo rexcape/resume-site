@@ -8,8 +8,8 @@ import { getTranslations } from '@/lib/notion'
 import { Shell } from '@/components/Shell'
 
 export const metadata = {
-  title: 'Rxsume',
-  description: 'Online resume for rexcape',
+  title: 'resume site',
+  description: 'online resume',
 }
 
 const notoSansSC = Noto_Sans_SC({
