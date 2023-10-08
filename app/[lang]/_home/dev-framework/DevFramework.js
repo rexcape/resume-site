@@ -34,7 +34,7 @@ export function DevFramework({ t }) {
   return (
     <div className={cs.root}>
       <Container size={CONTAINER_DEFAULT_WIDTH}>
-        <SectionTitle>{t['13']}</SectionTitle>
+        <SectionTitle id="dev-framework">{t['13']}</SectionTitle>
         <SkillGrid>{frameworkCards}</SkillGrid>
       </Container>
     </div>

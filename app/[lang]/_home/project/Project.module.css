@@ -1,0 +1,13 @@
+.root {
+  padding: 3rem 0;
+  margin: rem(-4px) 0;
+}
+
+.cardContainer {
+  position: relative;
+}
+
+.links {
+  position: absolute;
+  bottom: var(--mantine-spacing-lg);
+}

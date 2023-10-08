@@ -20,8 +20,8 @@ export function Shell({ children, t, lang }) {
     const prefix = lang === i18nConfig.defaultLocale ? '/' : `/${lang}/`
     return [
       { href: `${prefix}`, label: t['6'] },
-      { href: `${prefix}projects`, label: t['4'] },
-      { href: `${prefix}certifications`, label: t['5'] },
+      { href: `${prefix}#projects`, label: t['4'] },
+      { href: `${prefix}#certifications`, label: t['5'] },
     ]
   }
 

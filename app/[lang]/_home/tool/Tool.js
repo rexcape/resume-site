@@ -38,7 +38,7 @@ export function Tool({ t }) {
   return (
     <div className={cs.root}>
       <Container size={CONTAINER_DEFAULT_WIDTH}>
-        <SectionTitle>{t['14']}</SectionTitle>
+        <SectionTitle id="tool">{t['14']}</SectionTitle>
         <SkillGrid>{toolCards}</SkillGrid>
       </Container>
     </div>

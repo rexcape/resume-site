@@ -44,7 +44,7 @@ export function DevLang({ t }) {
   return (
     <div className={cs.root}>
       <Container size={CONTAINER_DEFAULT_WIDTH}>
-        <SectionTitle>{t['11']}</SectionTitle>
+        <SectionTitle id="dev-lang">{t['11']}</SectionTitle>
         <SkillGrid>{langCards}</SkillGrid>
       </Container>
     </div>
