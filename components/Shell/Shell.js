@@ -8,6 +8,7 @@ import {
   AppShellMain,
   Burger,
   Group,
+  UnstyledButton,
 } from '@mantine/core'
 import Link from 'next/link'
 import i18nConfig from '@/i18n'
@@ -41,13 +42,14 @@ export function Shell({ children, t, lang }) {
           <Group justify="space-between">
             <Group ml="xl" gap={2} visibleFrom="sm">
               {getLinks().map((item) => (
-                <Link
+                <UnstyledButton
+                  component={Link}
                   className={classes.control}
                   key={item.href}
                   href={item.href}
                 >
                   {item.label}
-                </Link>
+                </UnstyledButton>
               ))}
             </Group>
           </Group>
