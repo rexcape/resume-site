@@ -1,4 +1,4 @@
-import { Container, SimpleGrid } from '@mantine/core'
+import { Container } from '@mantine/core'
 import { CONTAINER_DEFAULT_WIDTH } from '@/theme'
 import { SectionTitle } from '../section-title'
 import { SkillCard } from '../skill-card'
