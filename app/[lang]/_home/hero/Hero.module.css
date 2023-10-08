@@ -37,8 +37,7 @@
   width: rem(126px);
   border-radius: var(--border-radius);
   padding: var(--border-width);
-
-  @apply transition-shadow;
+  transition: var(--var-transition);
 
   &:hover {
     box-shadow: var(--mantine-shadow-xl);
