@@ -20,7 +20,6 @@ const tools = [
   { name: 'Anaconda', tier: 'a', devicon: 'anaconda/anaconda-original.svg' },
   { name: 'Docker', tier: 'a', devicon: 'docker/docker-original.svg' },
   { name: 'Deno', tier: 'a', devicon: 'denojs/denojs-original.svg' },
-  { name: 'PhotoShop', tier: 'b', devicon: 'photoshop/photoshop-plain.svg' },
 ]
 
 export function Tool({ t }) {
