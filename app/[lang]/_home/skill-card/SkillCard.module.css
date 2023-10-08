@@ -5,10 +5,8 @@
   align-items: center;
   width: rem(64px);
   height: rem(64px);
-  border-color: light-dark(
-    var(--mantine-color-gray-5),
-    var(--mantine-color-gray-1)
-  );
+  border: rem(2px) solid
+    light-dark(var(--mantine-color-gray-5), var(--mantine-color-gray-1));
   border-width: rem(2px);
   border-radius: var(--mantine-radius-md);
 
