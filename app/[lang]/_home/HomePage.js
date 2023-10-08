@@ -7,7 +7,7 @@ import cs from './HomePage.module.css'
 
 export function HomePage({ t }) {
   return (
-    <div>
+    <div className={cs.root}>
       <Hero t={t} />
       <Wave1 />
       <DevLang t={t} />
