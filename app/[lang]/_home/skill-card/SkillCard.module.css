@@ -1,10 +1,18 @@
 .skillCard {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: rem(64px);
   height: rem(64px);
+  border-color: light-dark(
+    var(--mantine-color-gray-5),
+    var(--mantine-color-gray-1)
+  );
+  border-width: rem(2px);
   border-radius: var(--mantine-radius-md);
 
-  @apply transition-all;
+  transition: var(--var-transition);
 
   &:hover {
     box-shadow: var(--mantine-shadow-md);
@@ -28,11 +36,6 @@
 
 .skillImg {
   border-radius: var(--mantine-radius-md);
-  border-color: light-dark(
-    var(--mantine-color-gray-5),
-    var(--mantine-color-gray-1)
-  );
-  border-width: rem(2px);
 }
 
 .tierSvg {

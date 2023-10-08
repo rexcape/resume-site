@@ -21,8 +21,8 @@ export function SkillCard({ skill, t }) {
               : '/error-404.png'
           }
           alt={skill.name}
-          width={64}
-          height={64}
+          width={48}
+          height={48}
         />
       </Tooltip>
       <Tooltip label={getLabel(skill.tier, t)} position="right">
