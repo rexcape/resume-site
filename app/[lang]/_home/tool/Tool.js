@@ -2,6 +2,7 @@ import { Container, SimpleGrid } from '@mantine/core'
 import { CONTAINER_DEFAULT_WIDTH } from '@/theme'
 import { SectionTitle } from '../section-title'
 import { SkillCard } from '../skill-card'
+import { SkillGrid } from '../skill-grid'
 
 import cs from './Tool.module.css'
 
@@ -30,13 +31,7 @@ export function Tool({ t }) {
     <div className={cs.root}>
       <Container size={CONTAINER_DEFAULT_WIDTH}>
         <SectionTitle>{t['14']}</SectionTitle>
-        <SimpleGrid
-          cols={{ sm: 3, md: 4, lg: 5 }}
-          spacing={{ sm: 'sm', md: 'md', lg: 'lg' }}
-          verticalSpacing={{ sm: 'md', md: 'lg', lg: 'xl' }}
-        >
-          {toolCards}
-        </SimpleGrid>
+        <SkillGrid>{toolCards}</SkillGrid>
       </Container>
     </div>
   )

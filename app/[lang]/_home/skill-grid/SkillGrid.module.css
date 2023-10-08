@@ -1,0 +1,4 @@
+.grid {
+  justify-items: center;
+  margin: var(--mantine-spacing-md) calc(var(--mantine-spacing-md) * 2);
+}
