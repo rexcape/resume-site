@@ -6,6 +6,7 @@ import {
   CardSection,
   Group,
   Text,
+  Title,
 } from '@mantine/core'
 import { IconBrandGithub, IconPlanet } from '@tabler/icons-react'
 import Link from 'next/link'
@@ -35,7 +36,7 @@ export function ProjectCard({ project, t }) {
         />
       </CardSection>
       <Box mt="sm">
-        <Text fw={500}>{project.name}</Text>
+        <Title order={3} fw={500}>{project.name}</Title>
       </Box>
       <Group mt="sm" mb="sm">
         {tags}
