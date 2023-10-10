@@ -1,0 +1,21 @@
+.root {
+  background-color: #f3f4f5;
+  padding: 3rem 0;
+  margin: rem(-4px) 0;
+}
+
+.description {
+  position: relative;
+  height: rem(208px);
+}
+
+.links {
+  position: absolute;
+  bottom: 0;
+}
+
+.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

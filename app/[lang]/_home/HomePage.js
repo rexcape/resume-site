@@ -4,6 +4,8 @@ import { DevFramework } from './dev-framework'
 import { DevLang } from './dev-lang'
 import { Tool } from './tool'
 import { Project } from './project'
+import { Certification } from './certification'
+
 import cs from './HomePage.module.css'
 
 export function HomePage({ t }) {
@@ -19,6 +21,7 @@ export function HomePage({ t }) {
       <Wave4 />
       <Project t={t} />
       <Wave5 />
+      <Certification t={t} />
     </div>
   )
 }
