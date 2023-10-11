@@ -3,6 +3,7 @@ import '@mantine/core/styles.css'
 
 import { Noto_Sans_SC, Noto_Sans_JP, Noto_Sans } from 'next/font/google'
 import { MantineProvider, ColorSchemeScript } from '@mantine/core'
+import i18nConfig from '@/i18n'
 import { theme } from '@/theme'
 import { getTranslations } from '@/lib/notion'
 import { Shell } from '@/components/Shell'
@@ -30,7 +31,7 @@ const notoSans = Noto_Sans({
 })
 
 export function generateStaticParams() {
-  return [{ lang: 'zh' }, { lang: 'jp' }, { lang: 'en' }]
+  return i18nConfig.locales.map((item) => ({ lang: item }))
 }
 
 export default async function RootLayout({ children, params }) {
