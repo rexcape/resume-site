@@ -39,7 +39,7 @@ export function Certification({ t }) {
   return (
     <div className={cs.root}>
       <Container size={CONTAINER_DEFAULT_WIDTH}>
-        <SectionTitle id="certification">{t['24']}</SectionTitle>
+        <SectionTitle id="certifications">{t['24']}</SectionTitle>
         <Stack>{certs}</Stack>
       </Container>
     </div>
