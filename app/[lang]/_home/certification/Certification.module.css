@@ -6,12 +6,10 @@
 
 .description {
   position: relative;
-  height: rem(208px);
 }
 
 .links {
-  position: absolute;
-  bottom: 0;
+  margin-top: rem(20px);
 }
 
 .logo {

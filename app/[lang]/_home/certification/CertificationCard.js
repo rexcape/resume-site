@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card, Title, Text, Flex, Group, Button } from '@mantine/core'
-import { IconCertificate, IconEgg } from '@tabler/icons-react'
+import { Card, Title, Text, Flex, Group, Button, Spoiler } from '@mantine/core'
+import { IconCertificate } from '@tabler/icons-react'
 
 import cs from './Certification.module.css'
 
@@ -24,9 +24,19 @@ export function CertificationCard({ certification, t }) {
           <Title order={3} fw={500}>
             {t[certification.nameId]}
           </Title>
-          <Text mt="sm" size="sm" c="dimmed">
-            {t[certification.descriptionId]}
-          </Text>
+          <Spoiler
+            maxHeight={80}
+            showLabel={t['33']}
+            hideLabel={t['34']}
+            mt="sm"
+            size="sm"
+          >
+            {t[certification.descriptionId]?.split('\n').map((i, idx) => (
+              <Text key={idx} c="dimmed">
+                {i}
+              </Text>
+            ))}
+          </Spoiler>
           <Group className={cs.links}>
             <Button
               color="blue"
@@ -36,15 +46,6 @@ export function CertificationCard({ certification, t }) {
               href={certification.link}
             >
               {t['25']}
-            </Button>
-            <Button
-              color="dark"
-              leftSection={<IconEgg size={16} />}
-              component={Link}
-              target="_blank"
-              href={certification.get}
-            >
-              {t['26']}
             </Button>
           </Group>
         </Flex>

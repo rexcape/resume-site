@@ -7,32 +7,34 @@ import cs from './Certification.module.css'
 
 const certifications = [
   {
-    name: 'Responsive Web Design Certification',
+    id: 'responsive-web-design',
     nameId: '29',
     link: 'https://www.freecodecamp.org/certification/rexcape/responsive-web-design',
-    get: 'https://www.freecodecamp.org/learn/responsive-web-design/',
     from: 'freecodecamp',
-    description:
-      "In this Responsive Web Design Certification, you'll learn the languages that developers use to build webpages: HTML (Hypertext Markup Language) for content, and CSS (Cascading Style Sheets) for design.",
     descriptionId: '27',
+    image: '/certification/responsive-web-design.png',
+  },
+  {
+    id: 'back-end-development-and-apis',
+    nameId: '30',
+    link: 'https://www.freecodecamp.org/certification/rexcape/back-end-development-and-apis',
+    from: 'freecodecamp',
+    descriptionId: '28',
     image: '/certification/back-end-development-and-apis.png',
   },
   {
-    name: 'Back End Development and APIs',
-    nameId: '30',
-    link: 'https://www.freecodecamp.org/certification/rexcape/back-end-development-and-apis',
-    get: 'https://www.freecodecamp.org/learn/back-end-development-and-apis/',
+    id: 'front-end-development-libraries',
+    nameId: '31',
+    link: 'https://www.freecodecamp.org/certification/rexcape/front-end-development-libraries',
     from: 'freecodecamp',
-    description:
-      "Until this point, you've only used JavaScript on the front end to add interactivity to a page, solve algorithm challenges, or build an SPA. But JavaScript can also be used on the back end, or server, to build entire web applications.",
-    descriptionId: '28',
-    image: '/certification/responsive-web-design.png',
+    descriptionId: '32',
+    image: '/certification/front-end-development-libraries.png',
   },
 ]
 
 export function Certification({ t }) {
   const certs = certifications.map((c) => (
-    <CertificationCard key={c.name} certification={c} t={t} />
+    <CertificationCard key={c.id} certification={c} t={t} />
   ))
   return (
     <div className={cs.root}>
