@@ -12,6 +12,7 @@ import {
 import Link from 'next/link'
 import i18nConfig from '@/i18n'
 import classes from './Shell.module.css'
+import { MailButton } from './MailButton'
 
 export function Shell({ children, t, lang }) {
   const [opened, { toggle }] = useDisclosure()
@@ -62,6 +63,8 @@ export function Shell({ children, t, lang }) {
         ))}
       </AppShellNavbar>
       <AppShellMain style={{ padding: '0' }}>{children}</AppShellMain>
+
+      <MailButton lang={lang} />
     </AppShell>
   )
 }
