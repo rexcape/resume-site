@@ -3,38 +3,35 @@ import { CONTAINER_DEFAULT_WIDTH } from '@/theme'
 import { SectionTitle } from '../section-title'
 import { ProjectCard } from './ProjectCard'
 
-import RxofclockDemoPng from './screenshot/rxofclock.png'
-import ReplacerDemoPng from './screenshot/replacer.png'
-import MermaidEditorPng from './screenshot/mermaid.png'
 
 import cs from './Project.module.css'
 
 const projects = [
   {
     type: 'public',
-    name: 'rxofclock',
+    name: 'Rxofclock',
     descriptionId: '19',
     tags: ['handlebars', 'react', 'tailwind css', 'daisyui'],
     github: 'https://www.github.com/rexcape/rxofclock',
     demo: 'https://rxofclock.rexcape.icu',
-    image: RxofclockDemoPng,
+    image: '/project/screenshot/rxofclock.png',
   },
   {
     type: 'public',
-    name: 'replacer',
+    name: 'Replacer',
     descriptionId: '20',
     tags: ['regex', 'svelte', 'tailwind css', 'daisyui', 'drag and drop'],
     github: 'https://www.github.com/rexcape/replacer',
     demo: 'https://replacer.rexcape.icu',
-    image: ReplacerDemoPng,
+    image: '/project/screenshot/replacer.png',
   },
   {
     type: 'public',
-    name: 'mermaid editor',
+    name: 'Mermaid editor',
     descriptionId: '21',
     tags: ['mermaid', 'tauri', 'react', 'mantine ui'],
     github: 'https://www.github.com/rexcape/mermaid-editor',
-    image: MermaidEditorPng,
+    image: '/project/screenshot/mermaid-editor.png',
   },
 ]
 

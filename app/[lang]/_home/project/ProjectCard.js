@@ -1,13 +1,4 @@
-import {
-  Badge,
-  Box,
-  Button,
-  Card,
-  CardSection,
-  Group,
-  Text,
-  Title,
-} from '@mantine/core'
+import { Badge, Box, Button, Card, Group, Text, Title } from '@mantine/core'
 import { IconBrandGithub, IconPlanet } from '@tabler/icons-react'
 import Link from 'next/link'
 import { Image } from '@/components/Image'
@@ -28,15 +19,17 @@ export function ProjectCard({ project, t }) {
       radius="md"
       withBorder
     >
-      <CardSection>
-        <Image
-          src={project.image}
-          height={300}
-          alt={`${project.name} demo image`}
-        />
-      </CardSection>
+      <Image
+        src={project.image}
+        width={384}
+        height={216}
+        alt={`${project.name} demo image`}
+      />
+
       <Box mt="sm">
-        <Title order={3} fw={500}>{project.name}</Title>
+        <Title order={3} fw={500}>
+          {project.name}
+        </Title>
       </Box>
       <Group mt="sm" mb="sm">
         {tags}
