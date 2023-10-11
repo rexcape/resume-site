@@ -23,6 +23,7 @@ const tools = [
     devicon: 'postgresql/postgresql-original.svg',
   },
   { name: 'Redis', tier: 's', devicon: 'redis/redis-original.svg' },
+  { name: 'Vite', tier: 's', static: '/logo/vite.png'},
   { name: 'Nginx', tier: 'a', devicon: 'nginx/nginx-original.svg' },
   { name: 'Anaconda', tier: 'a', devicon: 'anaconda/anaconda-original.svg' },
   { name: 'Docker', tier: 'a', devicon: 'docker/docker-original.svg' },
