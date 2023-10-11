@@ -17,7 +17,7 @@ export function SkillCard({ skill, t }) {
             skill.devicon
               ? `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.devicon}`
               : skill.static
-              ? `/${skill.static}`
+              ? `${skill.static}`
               : '/error-404.png'
           }
           alt={skill.name}

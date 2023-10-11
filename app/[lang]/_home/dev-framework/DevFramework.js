@@ -12,8 +12,8 @@ const frameworks = [
   { name: 'Nextjs', tier: 's', devicon: 'nextjs/nextjs-original.svg' },
   { name: 'Vue', tier: 's', devicon: 'vuejs/vuejs-original.svg' },
   { name: 'Nuxtjs', tier: 's', devicon: 'nuxtjs/nuxtjs-original.svg' },
-  { name: 'Tauri', tier: 's', static: 'logo/tauri.png' },
-  { name: 'Mybatis', tier: 's', static: 'logo/mybatis.png' },
+  { name: 'Tauri', tier: 's', static: '/logo/tauri.png' },
+  { name: 'Mybatis', tier: 's', static: '/logo/mybatis.png' },
   {
     name: 'TailwindCSS',
     tier: 's',
