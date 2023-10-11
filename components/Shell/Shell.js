@@ -8,10 +8,7 @@ import {
   AppShellMain,
   Burger,
   Group,
-  Button,
-  Flex,
 } from '@mantine/core'
-import { IconMail } from '@tabler/icons-react'
 import Link from 'next/link'
 import i18nConfig from '@/i18n'
 import classes from './Shell.module.css'
@@ -28,11 +25,6 @@ export function Shell({ children, t, lang }) {
     ]
   }
 
-  const mailLink =
-    lang === 'zh'
-      ? 'mailto:mazixiang2012@yeah.net'
-      : 'mailto:mazixiang2012@gmail.com'
-
   return (
     <AppShell
       header={{ height: 60 }}
@@ -44,35 +36,21 @@ export function Shell({ children, t, lang }) {
       padding="md"
     >
       <AppShellHeader className={classes.navbar}>
-        <Group w="100%" h="100%" px="md">
+        <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Flex align="center" w="100%">
-            <Group justify="center" style={{ flex: 1 }}>
-              <Group gap={3} visibleFrom="sm">
-                {getLinks().map((item) => (
-                  <Link
-                    className={classes.control}
-                    key={item.href}
-                    href={item.href}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </Group>
+          <Group justify="space-between">
+            <Group gap={3} visibleFrom="sm">
+              {getLinks().map((item) => (
+                <Link
+                  className={classes.control}
+                  key={item.href}
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </Group>
-            <Button
-              variant="subtle"
-              color="dark"
-              radius="md"
-              style={{ flex: 'none' }}
-              leftSection={<IconMail />}
-              component={Link}
-              href={mailLink}
-              target="_blank"
-            >
-              {t['35']}
-            </Button>
-          </Flex>
+          </Group>
         </Group>
       </AppShellHeader>
 
@@ -82,18 +60,6 @@ export function Shell({ children, t, lang }) {
             {item.label}
           </Link>
         ))}
-        <Button
-          mt="lg"
-          color="dark"
-          radius="md"
-          variant="subtle"
-          leftSection={<IconMail />}
-          component={Link}
-          href={mailLink}
-          target="_blank"
-        >
-          {t['35']}
-        </Button>
       </AppShellNavbar>
       <AppShellMain style={{ padding: '0' }}>{children}</AppShellMain>
     </AppShell>
