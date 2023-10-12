@@ -13,6 +13,7 @@ import Link from 'next/link'
 import i18nConfig from '@/i18n'
 import classes from './Shell.module.css'
 import { MailButton } from './MailButton'
+import { Footer } from './Footer'
 
 export function Shell({ children, t, lang }) {
   const [opened, { toggle }] = useDisclosure()
@@ -28,7 +29,7 @@ export function Shell({ children, t, lang }) {
 
   return (
     <AppShell
-      header={{ height: 60 }}
+      header={{ height: 60, offset: true }}
       navbar={{
         width: 300,
         breakpoint: 'sm',
@@ -63,7 +64,7 @@ export function Shell({ children, t, lang }) {
         ))}
       </AppShellNavbar>
       <AppShellMain style={{ padding: '0' }}>{children}</AppShellMain>
-
+      <Footer />
       <MailButton lang={lang} />
     </AppShell>
   )
