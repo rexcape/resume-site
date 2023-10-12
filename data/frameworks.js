@@ -4,6 +4,8 @@ export const frameworks = [
   { name: 'Nextjs', tier: 's', devicon: 'nextjs/nextjs-original.svg' },
   { name: 'Vue', tier: 's', devicon: 'vuejs/vuejs-original.svg' },
   { name: 'Nuxtjs', tier: 's', devicon: 'nuxtjs/nuxtjs-original.svg' },
+  { name: 'Mantine', tier: 's', static: '/logo/mantine.svg' },
+  { name: 'DaisyUI', tier: 's', static: '/logo/daisyui.png' },
   { name: 'Tauri', tier: 's', static: '/logo/tauri.png' },
   { name: 'Mybatis', tier: 's', static: '/logo/mybatis.png' },
   {

@@ -1,4 +1,4 @@
-const tools = [
+export const tools = [
   { name: 'JetBrains', tier: 's', devicon: 'jetbrains/jetbrains-original.svg' },
   {
     name: 'Visual Studio Code',
