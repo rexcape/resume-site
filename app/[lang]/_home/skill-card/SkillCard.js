@@ -6,11 +6,12 @@ import {
   IconHexagonLetterB,
 } from '@tabler/icons-react'
 import cs from './SkillCard.module.css'
+import Link from 'next/link'
 
 export function SkillCard({ skill, t }) {
   return (
-    <Box className={cs.skillCard}>
-      <Tooltip label={skill.name} position="top">
+    <Box className={cs.skillCard} component={Link} href={skill.link}>
+      <Tooltip label={skill.name} position="top" offset={12}>
         <Image
           className={cs.skillImg}
           src={
